@@ -7,6 +7,13 @@
 
 
 
+<img width="1447" height="674" alt="Image" src="https://github.com/user-attachments/assets/f247b51c-e961-4cba-9e04-6472692e94e2" />
+
+
+
+
+
+
 
 
 
@@ -19,6 +26,8 @@
 
 ![Gameplay Demo](assets/images/demo.gif)
 
+
+<img width="1438" height="181" alt="Image" src="https://github.com/user-attachments/assets/195c4c66-eb92-44a1-8d8a-dd75fd400472" />
 ## 🎯 Features
 
 ### 🕹️ **Core Gameplay**
@@ -45,6 +54,11 @@
 - 💾 **Local Storage** - High score persistence
 - 📱 **Responsive Design** - Adapts to different screen sizes
 - 🔧 **Modular Architecture** - Clean, maintainable codebase
+
+
+<img width="321" height="350" alt="Image" src="https://github.com/user-attachments/assets/22c9d7d9-c7af-41db-a07c-62e1be09f43e" />
+
+
 
 ## 🎮 Quick Start
 
