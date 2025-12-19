@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroBlox AI - Retro Revival</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/retro.css">
+    <link rel="stylesheet" href="styles/ai-overlay.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+</head>
+<body>
+    <div class="win95-container">
+        <div class="title-bar">
+            <div class="title-text">NeuroBlox AI v1.0</div>
+            <div class="window-controls">
+                <button class="win-btn minimize">_</button>
+                <button class="win-btn maximize">□</button>
+                <button class="win-btn close">×</button>
+            </div>
+        </div>
+        
+        <div class="menu-bar">
+            <span class="menu-item">Game</span>
+            <span class="menu-item">AI Assistant</span>
+            <span class="menu-item">View</span>
+            <span class="menu-item">Help</span>
+        </div>
+        
+        <div class="main-content">
+            <div class="game-container">
+                <div class="game-header">
+                    <h1 class="retro-title">NEUROBLOX AI</h1>
+                    <div class="score-board">
+                        <div class="score-item">SCORE: <span id="score">00000</span></div>
+                        <div class="score-item">LEVEL: <span id="level">01</span></div>
+                        <div class="score-item">LINES: <span id="lines">0</span></div>
+                    </div>
+                </div>
+                
+                <div class="game-area">
+                    <canvas id="game-canvas" width="300" height="600"></canvas>
+                    <div class="side-panel">
+                        <div class="next-piece">
+                            <h3>NEXT</h3>
+                            <canvas id="next-canvas" width="100" height="100"></canvas>
+                        </div>
+                        <div class="ai-controls">
+                            <h3>AI ASSISTANT</h3>
+                            <div class="ai-status" id="ai-status">OFFLINE</div>
+                            <button id="ai-toggle" class="retro-button">ACTIVATE AI</button>
+                            <div class="ai-modes">
+                                <label><input type="radio" name="ai-mode" value="hint"> Hint Mode</label>
+                                <label><input type="radio" name="ai-mode" value="auto"> Auto Play</label>
+                                <label><input type="radio" name="ai-mode" value="predict"> Prediction</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="control-panel">
+                    <button id="start-btn" class="retro-button">START GAME</button>
+                    <button id="pause-btn" class="retro-button">PAUSE</button>
+                    <button id="reset-btn" class="retro-button">RESET</button>
+                    <div class="difficulty">
+                        <span>DIFFICULTY:</span>
+                        <select id="difficulty" title="Select game difficulty">
+                            <option value="easy">Easy</option>
+                            <option value="medium" selected>Medium</option>
+                            <option value="hard">Hard</option>
+                            <option value="insane">Insane</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ai-overlay">
+                <div class="ai-console">
+                    <div class="console-header">AI CONSOLE</div>
+                    <div class="console-output" id="ai-output">
+                        > AI Assistant Initializing...<br>
+                        > Ready for NeuroBlox AI<br>
+                        > Select an AI mode to begin
+                    </div>
+                    <div class="console-input">
+                        <span>></span>
+                        <input type="text" id="ai-command" placeholder="Ask AI for help...">
+                    </div>
+                </div>
+                
+                <div class="prediction-window">
+                    <h3>AI PREDICTIONS</h3>
+                    <div id="prediction-area">
+                        <canvas id="prediction-canvas" width="200" height="200"></canvas>
+                    </div>
+                    <div class="prediction-stats">
+                        <div>Next Best Move: <span id="best-move">Calculating...</span></div>
+                        <div>Success Probability: <span id="probability">--%</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="status-bar">
+            <div class="status-item">Ready</div>
+            <div class="status-item" id="ai-thinking">AI: IDLE</div>
+            <div class="status-item" id="fps-counter">FPS: 60</div>
+        </div>
+    </div>
+    
+    <script src="scripts/utils.js"></script>
+    <script src="scripts/tetris-engine.js"></script>
+    <script src="scripts/ai-assistant.js"></script>
+    <script src="scripts/retro-ui.js"></script>
+    <script src="scripts/game.js"></script>
+</body>
+</html>
